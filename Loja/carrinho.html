@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja de Tecnologia - Carrinho</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<body>
+  <!-- Gaveta lateral de departamentos -->
+  <div class="side-drawer" id="side-drawer">
+    <h2>Categorias</h2>
+    <ul>
+      <li><a href="#">Computadores</a></li>
+      <li><a href="#">Notebooks</a></li>
+      <li><a href="#">Monitores</a></li>
+      <li><a href="#">Periféricos</a></li>
+      <li><a href="#">Smartphones</a></li>
+      <li><a href="#">Acessórios</a></li>
+    </ul>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <a href="index.html" class="brand">TechStore</a>
+    <button class="btn-departamentos" id="btn-departamentos">
+      <i class="fa fa-bars"></i> Departamentos
+    </button>
+    <div class="search-bar">
+      <form action="pesquisa.html" method="get">
+        <input type="text" name="q" placeholder="Digite o que você procura..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div class="header-icons">
+      <a href="cadastro.html" title="Entrar / Cadastrar">
+        <i class="fa fa-user"></i> 
+      </a>
+      <a href="carrinho.html" title="Carrinho">
+        <i class="fa fa-shopping-cart"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="main-content">
+    <h2 style="text-align:center;">Carrinho de Compras</h2>
+    <p>Aqui serão listados os produtos adicionados ao carrinho.</p>
+    
+    <!-- Exemplo de item no carrinho -->
+    <div class="produto">
+      <h3>Produto Exemplo</h3>
+      <p>Quantidade: 1</p>
+      <p>Preço: R$ 100,00</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
