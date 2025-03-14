@@ -1,72 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja de Tecnologia - Cadastro/Login</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechOnlineStore - E-comerce</title>
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
+
 <body>
-  <!-- Gaveta lateral de departamentos -->
-  <div class="side-drawer" id="side-drawer">
-    <h2>Categorias</h2>
-    <ul>
-      <li><a href="#">Computadores</a></li>
-      <li><a href="#">Notebooks</a></li>
-      <li><a href="#">Monitores</a></li>
-      <li><a href="#">Periféricos</a></li>
-      <li><a href="#">Smartphones</a></li>
-      <li><a href="#">Acessórios</a></li>
-    </ul>
-  </div>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Cadastro</h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" id="nome" required placeholder=" ">
+                    <span class="placeholder">Nome</span>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="sobrenome" required placeholder=" ">
+                    <span class="placeholder">Sobrenome</span>
+                </div>
+                <div class="input-box">
+                    <input type="tel" id="cpf" required placeholder=" ">
+                    <span class="placeholder">CPF</span>
+                </div>
+                <div class="input-box">
+                    <input type="tel" id="celular" required placeholder=" ">
+                    <span class="placeholder">Celular</span>
+                </div>
 
-  <!-- Cabeçalho -->
-  <header class="header">
-    <a href="index.html" class="brand">TechStore</a>
-    <button class="btn-departamentos" id="btn-departamentos">
-      <i class="fa fa-bars"></i> Departamentos
-    </button>
-    <div class="search-bar">
-      <form action="pesquisa.html" method="get">
-        <input type="text" name="q" placeholder="Digite o que você procura..." />
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+                <div class="input-box">
+                   <input type="date" placeholder="Nascimento" required>
+                </div>
+                <div class="input-box">
+                    <select>
+                        <option>Sexo</option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                    </select>
+                </div>
+                <div class="remember-forgot">
+                    <label class="ofertas1"><input class="ofertas2" type="checkbox" id="check"> Receber ofertas e novidades</label>
+                </div>
+                <button type="submit" class="btn" onclick="window.location.href='login.html'">Cadastrar-se</button>
+            </form>
+        </div>
     </div>
-    <div class="header-icons">
-      <a href="cadastro.html" title="Entrar / Cadastrar">
-        <i class="fa fa-user"></i>
-      </a>
-      <a href="carrinho.html" title="Carrinho">
-        <i class="fa fa-shopping-cart"></i>
-      </a>
-    </div>
-  </header>
 
-  <!-- Conteúdo principal -->
-  <main class="main-content" style="max-width: 600px;">
-    <h2 style="text-align:center;">Cadastro e Login do Cliente</h2>
     
-    <section>
-      <h3>Login</h3>
-      <form action="#" method="post">
-        <input type="text" name="usuario" placeholder="Usuário" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-      </form>
-    </section>
-    
-    <section>
-      <h3>Cadastro</h3>
-      <form action="#" method="post">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit">Cadastrar</button>
-      </form>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,247 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-roxo:#7823ac;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho fixo */
+.header {
+    display: flex;
+    align-items: center;
+
+    background-color:var(--cor-roxo); /* roxo */
+    color: #fff;
+    padding: 0 20px;
+    height: 60px;
+}
+
+/* Logo/Marca */
+.header .brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Botão Departamentos */
+.btn-departamentos {
+    background-color: var(--cor-roxo);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-departamentos:hover {
+    background-color: var(--cor-roxo);
+}
+
+/* Ícones à direita */
+.header-icons {
+    align-items: center;
+}
+
+.header-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2em;
+    font-size: 1.1em;
+    float: right;
+    align-items: center;
+}
+
+.header-icons a i {
+    margin-right: 5px;
+}
+
+/* Gaveta lateral (Side Drawer) */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background-color: var(--cor-roxo); /* roxo mais escuro */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.side-drawer.open {
+    transform: translateX(0);
+}
+
+.side-drawer h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.side-drawer ul {
+    list-style: none;
+}
+
+.side-drawer ul li {
+    margin-bottom: 15px;
+}
+
+.side-drawer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Conteúdo principal */
+.main-content {
+    padding: 80px 20px; /* espaçamento para não ficar atrás do header fixo */
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 60vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Produtos */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    margin: 10px 0;
+}
+
+.produto p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.produto button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--cor-roxo);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.produto button:hover {
+    background-color: var(--cor-roxo);
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--cor-roxo);
+}
+
+.fomulario {
+    display: flex;
+    float: right;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding-right: 10px;
+    width: 20%;
+    position: relative;
+  }
+  
+  .texto_pesquisa {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .placeholder {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--cor-roxo);
+    padding: 0 5px;
+    color: white;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+  
+  /* Quando o input estiver focado ou preenchido, o placeholder sobe */
+  .texto_pesquisa:focus + .placeholder,
+  .texto_pesquisa:not(:placeholder-shown) + .placeholder {
+    top: 0;
+    font-size: 12px;
+  }
+
+  .search-icon{
+    color: white;
+  }
+
+.logo {
+    width: 20%;
+}
+.logo img {
+    float: left;
+}
+.logo_nome {
+    float: left;
+    margin-top: 10px;
+    font-size: 35px;
+}
+.tech {
+    color: var(--cor-roxo);
+    text-shadow: 
+        -2px -2px white,
+        2px -2px white,
+        -2px 2px white,
+        2px 2px white;
+}
+.store {
+    color: white;
+}

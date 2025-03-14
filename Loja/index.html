@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Loja de Tecnologia - Home</title>
   <!-- Link do CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Ícones (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
@@ -25,26 +25,28 @@
 
   <!-- Cabeçalho -->
   <header class="header">
-    <a href="index.html" class="brand">TechStore</a>
-    <button class="btn-departamentos" id="btn-departamentos">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="TechStore" height="60px">
+      <h3 class="tech logo_nome">Tech</h3>
+      <h3 class="store logo_nome">Store</h3>
+    </a>
+    <button class="btn-departamentos" id="btn-departamentos"></button>
       <i class="fa fa-bars"></i> Departamentos
     </button>
 
     <!--Barra de pesquisa-->
-    <div class="search-bar">
-        <form class="fomulario" action="pesquisa.html" method="get">
-          <input class="textoo" type="text" name="q" placeholder="Search..">
-          <button type="submit"><img src="https://via.placeholder.com/150" alt="Produto 1"></button>
-        </form>
-      </div>      
-
+    <form class="fomulario" action="pesquisa.html" method="get">
+      <input class="texto_pesquisa" type="text" id="nome" required placeholder=" ">
+      <span class="placeholder">Pesquisar</span>
+      <button type="submit"><i class="fa fa-search fa-lg search-icon"></i></button>
+    </form>
 
     <div class="header-icons">
       <a href="cadastro.html" title="Entrar / Cadastrar">
-        <i class="fa fa-user"></i>
+        <i class="fa fa-user fa-lg"></i>
       </a>
       <a href="carrinho.html" title="Carrinho">
-        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-shopping-cart fa-lg"></i>
       </a>
     </div>
   </header>

@@ -1,64 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja de Tecnologia - Carrinho</title>
-  <link rel="stylesheet" href="style.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/carrinho.css">
+
+  <title>Carrinho de compras</title>
 </head>
+
 <body>
-  <!-- Gaveta lateral de departamentos -->
-  <div class="side-drawer" id="side-drawer">
-    <h2>Categorias</h2>
-    <ul>
-      <li><a href="#">Computadores</a></li>
-      <li><a href="#">Notebooks</a></li>
-      <li><a href="#">Monitores</a></li>
-      <li><a href="#">Periféricos</a></li>
-      <li><a href="#">Smartphones</a></li>
-      <li><a href="#">Acessórios</a></li>
-    </ul>
-  </div>
+  <main class="conteudo-principal">
+    <div class="grafismo-azul"></div>
+    <section class="adicionar-produto">
+      <h1 class="titulo">
+        Carrinho de <span class="texto-azul">compras</span>
+      </h1>
 
-  <!-- Cabeçalho -->
-  <header class="header">
-    <a href="index.html" class="brand">TechStore</a>
-    <button class="btn-departamentos" id="btn-departamentos">
-      <i class="fa fa-bars"></i> Departamentos
-    </button>
-    <div class="search-bar">
-      <form action="pesquisa.html" method="get">
-        <input type="text" name="q" placeholder="Digite o que você procura..." />
-        <button type="submit"><i class="fa fa-search"></i></button>
+      <form class="formulario">
+        <label class="campo-grupo">
+          <span class="texto-medio-azul">Produto</span>
+          <select class="produto-input" name="produto" id="produto">
+            <option value="Fone de ouvido - R$159">Fone de ouvido - R$159</option>
+            <option value="Iphone 15 - R$4699">Iphone 15 - R$4699</option>
+            <option value="Oculus VR - R$5000">Oculus VR - R$5000</option>
+            <option value="Teclado Redragon- R$289">Teclado Redragon- R$289</option>
+            <option value="Cadeira Gamer - R$1234">Cadeira Gamer - R$1234</option>
+            <option value="Mouse Pad - R$29">Mouse Pad - R$29</option>
+          </select>
+        </label>
+
+        <section class="parte-inferior">
+          <label class="campo-grupo">
+            <span class="texto-medio-azul">Qtde.</span>
+            <input class="quantidade-input" id="quantidade" type="number" placeholder="100">
+          </label>
+
+          <section class="botoes-wrapper">
+            <button onclick="adicionar()" type="button" class="botao-form botao-adicionar">Adicionar</button>
+            <button onclick="limpar()" type="button" class="botao-form botao-limpar">Limpar</button>
+          </section>
+        </section>
       </form>
-    </div>
-    <div class="header-icons">
-      <a href="cadastro.html" title="Entrar / Cadastrar">
-        <i class="fa fa-user"></i> 
-      </a>
-      <a href="carrinho.html" title="Carrinho">
-        <i class="fa fa-shopping-cart"></i>
-      </a>
-    </div>
-  </header>
+    </section>
+    <section class="carrinho">
+      <img src="/img/carrinho.png" alt="Imagem de um carrinho de compras cinza">
 
-  <!-- Conteúdo principal -->
-  <main class="main-content">
-    <h2 style="text-align:center;">Carrinho de Compras</h2>
-    <p>Aqui serão listados os produtos adicionados ao carrinho.</p>
-    
-    <!-- Exemplo de item no carrinho -->
-    <div class="produto">
-      <h3>Produto Exemplo</h3>
-      <p>Quantidade: 1</p>
-      <p>Preço: R$ 100,00</p>
+      <div class="titulo-wrapper">
+        <h2 class="carrinho__titulo">Produtos no carrinho</h2>
+      </div>
+
+      <section class="carrinho__produtos" id="lista-produtos">
+        <section class="carrinho__produtos__produto">
+          <span class="texto-azul">1x</span> Iphone 15 <span class="texto-azul">$4699</span>
+        </section>
+      </section>
+
+      <div class="divisoria"></div>
+
+      <p class="carrinho__total">
+        Total: <span class="texto-azul" id="valor-total">$4699</span>
+      </p>
+    </section>
+    <div class="extra-images">
+      <img src="/img/cadeiragamer.png" alt="Another Image 1" class="extra-image">
+      <img src="/img/fone.png" alt="Another Image 2" class="extra-image">
+      <img src="/img/iphone.png" alt="Another Image 3" class="extra-image">
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script src="/js/app.js"></script>
 </body>
+
 </html>
