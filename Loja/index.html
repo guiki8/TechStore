@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
+
   <!-- Gaveta lateral de departamentos -->
   <div class="side-drawer" id="side-drawer">
     <h2>Categorias</h2>
+    <i class="fa fa-arrow-left fa-lg" id="btn-departamentos2"></i>
     <ul>
       <li><a href="#">Computadores</a></li>
       <li><a href="#">Notebooks</a></li>
@@ -25,21 +27,16 @@
 
   <!-- Cabeçalho -->
   <header class="header">
+
+    <button class="btn-departamentos" id="btn-departamentos">
+      <i class="fa fa-bars"></i> Departamentos
+    </button>
+
     <a href="index.html" class="logo">
       <img src="img/logo.png" alt="TechStore" height="60px">
       <h3 class="tech logo_nome">Tech</h3>
       <h3 class="store logo_nome">Store</h3>
     </a>
-    <button class="btn-departamentos" id="btn-departamentos"></button>
-      <i class="fa fa-bars"></i> Departamentos
-    </button>
-
-    <!--Barra de pesquisa-->
-    <form class="fomulario" action="pesquisa.html" method="get">
-      <input class="texto_pesquisa" type="text" id="nome" required placeholder=" ">
-      <span class="placeholder">Pesquisar</span>
-      <button type="submit"><i class="fa fa-search fa-lg search-icon"></i></button>
-    </form>
 
     <div class="header-icons">
       <a href="cadastro.html" title="Entrar / Cadastrar">
@@ -49,6 +46,14 @@
         <i class="fa fa-shopping-cart fa-lg"></i>
       </a>
     </div>
+    
+    <!--Barra de pesquisa-->
+    <form class="formulario" action="pesquisa.html" method="get">
+      <input class="texto_pesquisa" type="text" id="nome" required placeholder=" ">
+      <span class="placeholder">Pesquisar</span>
+      <button type="submit"><i class="fa fa-search fa-lg search-icon"></i></button>
+    </form>
+
   </header>
 
   <!-- Conteúdo principal -->

@@ -1,11 +1,21 @@
 // Seleciona elementos importantes
 const btnDepartamentos = document.getElementById('btn-departamentos');
+const btnDepartamentos2 = document.getElementById('btn-departamentos2');
 const sideDrawer = document.getElementById('side-drawer');
 
-// Evento para abrir/fechar a gaveta lateral
+// Evento para abrir/fechar a gaveta lateral com o botao
 btnDepartamentos.addEventListener('click', () => {
   sideDrawer.classList.toggle('open');
 });
+
+// Evento para abrir/fechar a gaveta lateral com a seta
+btnDepartamentos2.addEventListener('click', () => {
+  sideDrawer.classList.toggle('open');
+});
+
+
+
+//Carrinho
 
 let totalGeral = 0;
 limpar();

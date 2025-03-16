@@ -19,9 +19,8 @@ body {
 
 /* Cabeçalho fixo */
 .header {
-    display: flex;
     align-items: center;
-
+    display: flexbox;
     background-color:var(--cor-roxo); /* roxo */
     color: #fff;
     padding: 0 20px;
@@ -36,23 +35,31 @@ body {
 
 /* Botão Departamentos */
 .btn-departamentos {
-    background-color: var(--cor-roxo);
-    color: #fff;
-    border: none;
+    background-color: white;
+    float: left;
+    color: var(--cor-roxo);
     padding: 8px 15px;
     cursor: pointer;
-    margin-right: 20px;
-    border-radius: 4px;
-    font-weight: 500;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 60%;
+    margin-top: 0.5%;
+    transition: background-color 0.5s, transform 0.5s;
 }
 
 .btn-departamentos:hover {
     background-color: var(--cor-roxo);
+    color: #fff;
+    transition: background-color 0.5s, transform 0.5s;
 }
 
 /* Ícones à direita */
 .header-icons {
     align-items: center;
+    justify-content: center;
+    display: flex;
+    float: right;
+    height: 100%;
 }
 
 .header-icons a {
@@ -65,7 +72,7 @@ body {
 }
 
 .header-icons a i {
-    margin-right: 5px;
+    margin-right: 50%;
 }
 
 /* Gaveta lateral (Side Drawer) */
@@ -73,7 +80,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 280px;
+    width: 12%;
     height: 100%;
     background-color: var(--cor-roxo); /* roxo mais escuro */
     transform: translateX(-100%);
@@ -81,6 +88,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 .side-drawer.open {
@@ -90,9 +98,12 @@ body {
 .side-drawer h2 {
     color: #fff;
     margin-bottom: 20px;
+    float: left;
 }
 
 .side-drawer ul {
+    width: 60%;
+    margin-left: 10%;
     list-style: none;
 }
 
@@ -102,8 +113,24 @@ body {
 
 .side-drawer ul li a {
     color: #fff;
+    font-size: 16px;
     text-decoration: none;
-    font-size: 1em;
+}
+
+.fa-arrow-left {
+    color: var(--cor-roxo);
+    padding: 8px;
+    background-color: white;
+    border-radius: 100%;
+    margin-left: 10%;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.fa-arrow-left:hover {
+    cursor: pointer;
+    background-color: var(--cor-roxo);
+    color: #fff;
+    transition: background-color 0.5s, transform 0.5s;
 }
 
 /* Conteúdo principal */
@@ -168,14 +195,15 @@ form button[type="submit"]:hover {
     background-color: var(--cor-roxo);
 }
 
-.fomulario {
+.formulario {
     display: flex;
     float: right;
     align-items: center;
     border: 2px solid white;
     border-radius: 15px;
     padding-right: 10px;
-    width: 20%;
+    margin-top: 0.5%;
+    width: 30%;
     position: relative;
   }
   
@@ -225,6 +253,8 @@ form button[type="submit"]:hover {
 
 .logo {
     width: 20%;
+    float: left;
+    margin-left: 32%;
 }
 .logo img {
     float: left;
