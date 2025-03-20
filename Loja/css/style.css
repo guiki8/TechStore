@@ -27,12 +27,6 @@ body {
     height: 60px;
 }
 
-/* Logo/Marca */
-.header .brand {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
 /* Botão Departamentos */
 .btn-departamentos {
     background-color: white;
@@ -80,7 +74,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 12%;
+    width: 20%;
     height: 100%;
     background-color: var(--cor-roxo); /* roxo mais escuro */
     transform: translateX(-100%);
@@ -203,12 +197,13 @@ form button[type="submit"]:hover {
     border-radius: 15px;
     padding-right: 10px;
     margin-top: 0.5%;
-    width: 30%;
+    width: 20%;
     position: relative;
   }
   
   .texto_pesquisa {
     flex: 1;
+    width: 80%;
     border: none;
     outline: none;
     padding: 10px;
@@ -249,12 +244,13 @@ form button[type="submit"]:hover {
 
   .search-icon{
     color: white;
+
   }
 
 .logo {
     width: 20%;
     float: left;
-    margin-left: 32%;
+    margin-left: 20%;
 }
 .logo img {
     float: left;
