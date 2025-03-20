@@ -5,6 +5,10 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+:root{
+    --cor-roxo:#7823ac;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -13,6 +17,116 @@ body {
     background: url(/img/setup.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+/* Cabeçalho fixo */
+.header {
+    align-items: center;
+    display: flexbox;
+    background-color:var(--cor-roxo); /* roxo */
+    color: #fff;
+    padding: 0 20px;
+    height: 60px;
+}
+
+/* Botão Departamentos */
+.btn-departamentos {
+    background-color: white;
+    float: left;
+    color: var(--cor-roxo);
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 60%;
+    margin-top: 0.5%;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.btn-departamentos:hover {
+    background-color: var(--cor-roxo);
+    color: #fff;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+/* Ícones à direita */
+.header-icons {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    float: right;
+    height: 100%;
+}
+
+.header-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2em;
+    font-size: 1.1em;
+    float: right;
+    align-items: center;
+}
+
+.header-icons a i {
+    margin-right: 50%;
+}
+
+/* Gaveta lateral (Side Drawer) */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: var(--cor-roxo); /* roxo mais escuro */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.side-drawer.open {
+    transform: translateX(0);
+}
+
+.side-drawer h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.side-drawer ul {
+    width: 60%;
+    margin-left: 10%;
+    list-style: none;
+}
+
+.side-drawer ul li {
+    margin-bottom: 15px;
+}
+
+.side-drawer ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.fa-arrow-left {
+    color: var(--cor-roxo);
+    padding: 8px;
+    background-color: white;
+    border-radius: 100%;
+    margin-left: 10%;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.fa-arrow-left:hover {
+    cursor: pointer;
+    background-color: var(--cor-roxo);
+    color: #fff;
+    transition: background-color 0.5s, transform 0.5s;
 }
 
 header {
