@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechOnlineStore - E-comerce</title>
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
-<body>
 
-<!-- Cabeçalho -->
-<header class="header">
+<body>
+  <!-- Gaveta lateral de departamentos -->
+  <div class="side-drawer" id="side-drawer">
+    <h2>Categorias</h2>
+    <i class="fa fa-arrow-left fa-lg" id="btn-departamentos2"></i>
+    <ul>
+      <li><a href="#">Computadores</a></li>
+      <li><a href="#">Notebooks</a></li>
+      <li><a href="#">Monitores</a></li>
+      <li><a href="#">Periféricos</a></li>
+      <li><a href="#">Smartphones</a></li>
+      <li><a href="#">Acessórios</a></li>
+    </ul>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header">
 
     <button class="btn-departamentos" id="btn-departamentos">
       <i class="fa fa-bars"></i> Departamentos
@@ -21,6 +38,13 @@
       <h3 class="store logo_nome">Store</h3>
     </a>
 
+    <!--Barra de pesquisa-->
+    <form class="pesquisa-formulario" action="pesquisa.html" method="get">
+      <input class="texto_pesquisa" type="text" id="nome" required placeholder=" ">
+      <span class="placeholder">Pesquisar</span>
+      <button type="submit"><i class="fa fa-search fa-lg search-icon"></i></button>
+    </form>
+    
     <div class="header-icons">
       <a href="cadastro.html" title="Entrar / Cadastrar">
         <i class="fa fa-user fa-lg"></i>
@@ -28,15 +52,10 @@
       <a href="carrinho.html" title="Carrinho">
         <i class="fa fa-shopping-cart fa-lg"></i>
       </a>
-</div>
-    
-    <!--Barra de pesquisa-->
-    <form class="formulario" action="pesquisa.html" method="get">
-      <input class="texto_pesquisa" type="text" id="nome" required placeholder=" ">
-      <span class="placeholder">Pesquisar</span>
-      <button type="submit"><i class="fa fa-search fa-lg search-icon"></i></button>
-    </form>
-
+      <a href="novo_produto.html" title="Carrinho">
+        <i class="fa fa-plus fa-lg"></i>
+      </a>
+    </div>
   </header>
 
     <div class="wrapper">
@@ -77,7 +96,6 @@
             </form>
         </div>
     </div>
-
-    
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,60 +1,315 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loja de Tecnologia - Novo Produto</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Produto</title>
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        :root {
+            --cor-roxo: #7823ac;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            color: #333;
+            flex-direction: row;
+        }
+
+        header {
+            position: fixed;
+            background-color: var(--cor-roxo);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        .wrapper {
+            width: 400px;
+            background: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-box {
+            width: 100%;
+        }
+
+        .input-box {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #aaa;
+            border-radius: 5px;
+            outline: none;
+            background: transparent;
+            color: #333;
+        }
+
+        .input-box input:focus {
+            border-color: var(--cor-roxo);
+        }
+
+        #imagem {
+            display: none;
+        }
+
+        #upload-btn {
+            background-color: #e4e4e4;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        #upload-btn:hover {
+            background-color: rgb(182, 182, 182)
+        }
+
+        .btn {
+            width: 100%;
+            height: 40px;
+            background: var(--cor-roxo);
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            color: white;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: var(--cor-roxo);
+            border: 2px solid var(--cor-roxo);
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            padding-top: 80px; /* Para não cobrir o conteúdo com o header */
+            padding-left: 20%;
+            padding-right: 20%;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .form-section {
+            width: 45%;
+        }
+
+        .products-section {
+            width: 45%;
+            background-color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            overflow-y: auto;
+            height: 500px;
+        }
+
+        .product-item {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-item:last-child {
+            border-bottom: none;
+        }
+
+        .product-image {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-name {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .product-price {
+            width: 80px;
+            margin-right: 15%;
+        }
+
+        .product-stock {
+            width: 60px;
+            text-align: center;
+        }
+
+        .product-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
 </head>
 <body>
-  <!-- Gaveta lateral de departamentos -->
-  <div class="side-drawer" id="side-drawer">
-    <h2>Categorias</h2>
-    <ul>
-      <li><a href="#">Computadores</a></li>
-      <li><a href="#">Notebooks</a></li>
-      <li><a href="#">Monitores</a></li>
-      <li><a href="#">Periféricos</a></li>
-      <li><a href="#">Smartphones</a></li>
-      <li><a href="#">Acessórios</a></li>
-    </ul>
-  </div>
-
-  <!-- Cabeçalho -->
-  <header class="header">
-    <a href="index.html" class="brand">TechStore</a>
-    <button class="btn-departamentos" id="btn-departamentos">
-      <i class="fa fa-bars"></i> Departamentos
-    </button>
-    <div class="search-bar">
-      <form action="pesquisa.html" method="get">
-        <input type="text" name="q" placeholder="Digite o que você procura..." />
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+    <!-- Gaveta lateral de departamentos -->
+    <div class="side-drawer" id="side-drawer">
+        <h2>Categorias</h2>
+        <i class="fa fa-arrow-left fa-lg" id="btn-departamentos2"></i>
+        <ul>
+            <li><a href="#">Computadores</a></li>
+            <li><a href="#">Notebooks</a></li>
+            <li><a href="#">Monitores</a></li>
+            <li><a href="#">Periféricos</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Acessórios</a></li>
+        </ul>
     </div>
-    <div class="header-icons">
-      <a href="cadastro.html" title="Entrar / Cadastrar">
-        <i class="fa fa-user"></i>
-      </a>
-      <a href="carrinho.html" title="Carrinho">
-        <i class="fa fa-shopping-cart"></i>
-      </a>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <button class="btn-departamentos" id="btn-departamentos">
+            <i class="fa fa-bars"></i> Departamentos
+        </button>
+
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="TechStore" height="60px">
+            <h3 class="tech logo_nome">Tech</h3>
+            <h3 class="store logo_nome">Store</h3>
+        </a>
+
+        <!-- Barra de pesquisa -->
+        <form class="pesquisa-formulario" action="pesquisa.html" method="get">
+            <input class="texto_pesquisa" type="text" id="nome" required placeholder=" ">
+            <span class="placeholder">Pesquisar</span>
+            <button type="submit"><i class="fa fa-search fa-lg search-icon"></i></button>
+        </form>
+        
+        <div class="header-icons">
+            <a href="cadastro.html" title="Entrar / Cadastrar">
+                <i class="fa fa-user fa-lg"></i>
+            </a>
+            <a href="carrinho.html" title="Carrinho">
+                <i class="fa fa-shopping-cart fa-lg"></i>
+            </a>
+            <a href="novo_produto.html" title="Novo Produto">
+                <i class="fa fa-plus fa-lg"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <!-- Formulário de Registro de Produto -->
+        <div class="form-section">
+            <div class="wrapper">
+                <h2>Registrar Produto</h2>
+                <div class="form-box">
+                    <form>
+                        <div class="input-box">
+                            <label for="nome">Nome do Produto:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="valor">Valor:</label>
+                            <input type="number" id="valor" name="valor" step="0.01" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label>Imagem:</label>
+                            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                            <button type="button" id="upload-btn">Selecionar Imagem</button>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="estoque">Estoque:</label>
+                            <input type="number" id="estoque" name="estoque" required>
+                        </div>
+                        
+                        <button type="submit" class="btn">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de Produtos Cadastrados -->
+        <div class="products-section">
+            <h2>Produtos Cadastrados</h2>
+            <div class="product-header">
+                <span>Produto</span>
+                <br>
+                <span>Valor</span>
+                <span>Estoque</span>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="img/fone.png" alt="Produto 1">
+                <span class="product-name">Produto 1</span>
+                <span class="product-price">R$ 100,00</span>
+                <span class="product-stock">10</span>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="img/cadeiragamer.png" alt="Produto 2">
+                <span class="product-name">Produto 2</span>
+                <span class="product-price">R$ 150,00</span>
+                <span class="product-stock">5</span>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="img/iphone.png" alt="Produto 3">
+                <span class="product-name">Produto 3</span>
+                <span class="product-price">R$ 200,00</span>
+                <span class="product-stock">3</span>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- Conteúdo principal -->
-  <main class="main-content" style="max-width: 600px;">
-    <h2 style="text-align:center;">Cadastro de Novo Produto</h2>
-    <form action="#" method="post">
-      <input type="text" name="nome" placeholder="Nome do Produto" required>
-      <input type="text" name="descricao" placeholder="Descrição" required>
-      <input type="number" name="preco" placeholder="Preço" step="0.01" required>
-      <input type="url" name="imagem" placeholder="URL da Imagem" required>
-      <button type="submit">Cadastrar Produto</button>
-    </form>
-  </main>
-
-  <script src="script.js"></script>
+    <script>
+        document.getElementById('upload-btn').addEventListener('click', function() {
+            document.getElementById('imagem').click();
+        });
+    </script>
 </body>
 </html>
