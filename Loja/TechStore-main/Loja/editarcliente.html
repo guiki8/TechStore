@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechOnlineStore - E-comerce</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Editar Cliente - TechStore</title>
+    <link rel="stylesheet" href="css/editarcliente.css">
     <link rel="stylesheet" href="css/header.css">
     <!-- Ícones (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -49,13 +49,10 @@
       <a href="cadastro.html" title="Entrar / Cadastrar">
         <i class="fa fa-user fa-lg"></i>
       </a>
-      <a href="editarcliente.html" title="Editar Cliente">
-        <i class="fa fa-user-plus fa-lg"></i>
-      </a>
       <a href="carrinho.html" title="Carrinho">
         <i class="fa fa-shopping-cart fa-lg"></i>
       </a>
-      <a href="editarproduto.html" title="Editar Produtos">
+      <a href="novo_produto.html" title="Carrinho">
         <i class="fa fa-plus fa-lg"></i>
       </a>
     </div>
@@ -63,15 +60,15 @@
 
     <div class="wrapper">
         <div class="form-box login">
-            <h2>Cadastro</h2>
+            <h2>Alterar Cliente</h2>
             <form action="#">
                 <div class="input-box">
                     <input type="text" id="nome" required placeholder=" ">
-                    <span class="placeholder">Nome Completo</span>
+                    <span class="placeholder">Nome</span>
                 </div>
                 <div class="input-box">
-                    <input type="email" id="email" required placeholder=" ">
-                    <span class="placeholder">Email</span>
+                    <input type="text" id="sobrenome" required placeholder=" ">
+                    <span class="placeholder">Sobrenome</span>
                 </div>
                 <div class="input-box">
                     <input type="tel" id="cpf" required placeholder=" ">
@@ -81,22 +78,21 @@
                     <input type="tel" id="celular" required placeholder=" ">
                     <span class="placeholder">Celular</span>
                 </div>
+
                 <div class="input-box">
-                   <input type="password" id="senha" required placeholder=" " >
-                   <span class="placeholder">Senha</span>
+                   <input type="date" placeholder="Nascimento" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" id="cep" required placeholder=" ">
-                    <span class="placeholder">CEP</span>
-                </div>
-                <div class="input-box">
-                    <input type="text" id="endereço" required placeholder=" ">
-                    <span class="placeholder">Endereço</span>
+                    <select>
+                        <option>Sexo</option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                    </select>
                 </div>
                 <div class="remember-forgot">
-                    <label class="ofertas1"><input class="ofertas2" type="checkbox" id="check"> Receber ofertas e novidades</label>
+                    <label class="ofertas1"><input class="ofertas2" type="checkbox" id="check"> Confirmo meu novo Cadastro de Cliente</label>
                 </div>
-                <button type="submit" class="btn" onclick="window.location.href='login.html'">Cadastrar-se</button>
+                <button type="submit" class="btn" onclick="window.location.href='login.html'">Alterar</button>
             </form>
         </div>
     </div>
