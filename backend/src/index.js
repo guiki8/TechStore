@@ -3,6 +3,7 @@ import cors from 'cors'
 import {Mongo} from './database/mongo.js'
 import {config} from 'dotenv'
 import dns from "dns";
+import authRouter from './auth/auth.js';
 dns.setServers(["1.1.1.1", "1.0.0.1"]);
 
 config()
@@ -26,6 +27,8 @@ async function main() {
             body: 'Welcome to TechStore'
         })
     })
+
+    app.use('/auth', authRouter)
 
     app.listen(port, () => {
         console.log(`Server running on: http://${hostname}:${port}`)
