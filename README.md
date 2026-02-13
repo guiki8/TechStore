@@ -1,16 +1,16 @@
 # 🛒 TechStore
 
-## Sobre o repositório
-Site básico de e-commerce para eletrônicos, com layout de vitrine de produtos.
+## About the Repository
+Basic e-commerce website for electronics, featuring a storefront-style product layout.
 
-## Funcionalidades
-- Página inicial com listagem de produtos
-- Detalhes dos itens e carrinho simulado
+## Features
+- Homepage with product listings
+- Item details and simulated shopping cart
 
-## Tecnologias
+## Technologies
 - HTML5, CSS3, JavaScript
 
-## Como executar
-Abra `index.html` no navegador ou rode um servidor local:
+## How to Run
+Open `index.html` in your browser or run a local server:
 ```bash
 python -m http.server 8000
